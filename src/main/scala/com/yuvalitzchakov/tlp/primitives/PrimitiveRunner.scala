@@ -9,7 +9,7 @@ object PrimitiveRunner {
   import PrimitiveShowInstances._
   def main(args: Array[String]): Unit = {
 
-    Logger.log(10)
-    Logger.log("Hello Scala-IL!!")
+    Logger.log(10)(intEncoder)
+    Logger.log("Hello Scala-IL!!")(stringEncoder)
   }
 }

@@ -30,7 +30,7 @@ object HListLabeledGenericShowInstances {
   implicit def genericEncoder[A, R](
       implicit
       gen: LabelledGeneric.Aux[A, R],
-      env: Show[R]
+      env: Lazy[Show[R]]
   ): Show[A] =
-    instance(a => env.show(gen.to(a)))
+    instance(a => env.value.show(gen.to(a)))
 }

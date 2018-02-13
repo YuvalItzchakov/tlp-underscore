@@ -1,6 +1,6 @@
 package com.yuvalitzchakov.tlp.caseclass
 
-import com.yuvalitzchakov.tlp.Logger
+import com.yuvalitzchakov.tlp.ImplicitLogger
 import com.yuvalitzchakov.tlp.primitives._
 
 /**
@@ -14,6 +14,6 @@ object CaseClassRunner {
 
   def main(args: Array[String]): Unit = {
     val person = Person("Yuval", "Itzchakov", 30)
-    Logger.log(person)
+    ImplicitLogger.log(person)
   }
 }

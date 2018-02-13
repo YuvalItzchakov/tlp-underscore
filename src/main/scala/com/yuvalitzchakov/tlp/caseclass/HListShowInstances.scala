@@ -19,8 +19,8 @@ object HListShowInstances {
       hEncoder: Lazy[Show[H]],
       tEncoder: Show[T]): Show[H :: T] = {
     instance { hlist =>
-      val head = hEncoder.value.show(hlist.head)
-      val tail = tEncoder.show(hlist.tail)
+      val head: String = hEncoder.value.show(hlist.head)
+      val tail: String = tEncoder.show(hlist.tail)
       s"$head, $tail"
     }
   }
